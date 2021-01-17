@@ -180,7 +180,7 @@ module layer1_cnn(
 			read_pixel_clear=1'b1;
 			//keep
 			read_pixel_row_clear=1'b1;
-			read_pixel_row_keep=1'b1;
+			read_pixel_row_keep=1'b0;
 			//keep
 			if(pixel_store_done)
 			begin
@@ -633,6 +633,8 @@ module layer1_cnn(
 	//----------------------------------------SYSTOLIC_ARRARYY---------------------------------------------//
 
 	layer1_systolic array1(
+	.clk(clk),
+	.rst(rst),
 	.input_channel(col_1_1_register_out),
 	
 	.output_channel1(systolic1_output[0]),
@@ -655,6 +657,8 @@ module layer1_cnn(
 );
 
 	layer1_systolic array2(
+	.clk(clk),
+	.rst(rst),
 	.input_channel(col_1_2_register_out),
 	
 	.output_channel1(systolic2_output[0]),
@@ -676,6 +680,8 @@ module layer1_cnn(
 	.weight8(weight_register_out2[7])
 );
 	layer1_systolic array3(
+	.clk(clk),
+	.rst(rst),
 	.input_channel(col_1_3_register_out),
 	
 	.output_channel1(systolic3_output[0]),
@@ -698,6 +704,8 @@ module layer1_cnn(
 );
 
 	layer1_systolic array4(
+	.clk(clk),
+	.rst(rst),
 	.input_channel(col_2_1_register_out),
 	
 	.output_channel1(systolic4_output[0]),
@@ -719,6 +727,8 @@ module layer1_cnn(
 	.weight8(weight_register_out4[7])
 );
 	layer1_systolic array5(
+	.clk(clk),
+	.rst(rst),
 	.input_channel(col_2_2_register_out),
 	
 	.output_channel1(systolic5_output[0]),
@@ -740,6 +750,8 @@ module layer1_cnn(
 	.weight8(weight_register_out5[7])
 );
 	layer1_systolic array6(
+	.clk(clk),
+	.rst(rst),
 	.input_channel(col_2_3_register_out),
 	
 	.output_channel1(systolic6_output[0]),
@@ -761,6 +773,8 @@ module layer1_cnn(
 	.weight8(weight_register_out6[7])
 );
 	layer1_systolic array7(
+	.clk(clk),
+	.rst(rst),
 	.input_channel(col_3_1_register_out),
 	
 	.output_channel1(systolic7_output[0]),
@@ -782,6 +796,8 @@ module layer1_cnn(
 	.weight8(weight_register_out7[7])
 );
 	layer1_systolic array8(
+	.clk(clk),
+	.rst(rst),
 	.input_channel(col_3_2_register_out),
 	
 	.output_channel1(systolic8_output[0]),
@@ -803,6 +819,8 @@ module layer1_cnn(
 	.weight8(weight_register_out8[7])
 );
 	layer1_systolic array9(
+	.clk(clk),
+	.rst(rst),
 	.input_channel(col_3_3_register_out),
 	
 	.output_channel1(systolic9_output[0]),

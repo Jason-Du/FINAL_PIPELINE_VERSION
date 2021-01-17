@@ -629,6 +629,8 @@ module layer4_cnn(
 	//----------------------------------------SYSTOLIC_ARRARYY---------------------------------------------//
 
 	layer2_systolic array1(
+	.clk(clk),
+	.rst(rst),
 	.input_channel(col_1_1_register_out),
 	
 	.output_channel1(systolic1_output[0]),
@@ -651,6 +653,8 @@ module layer4_cnn(
 );
 
 	layer2_systolic array2(
+	.clk(clk),
+	.rst(rst),
 	.input_channel(col_1_2_register_out),
 	
 	.output_channel1(systolic2_output[0]),
@@ -672,6 +676,8 @@ module layer4_cnn(
 	.weight8(weight_register_out2[7])
 );
 	layer2_systolic array3(
+	.clk(clk),
+	.rst(rst),
 	.input_channel(col_1_3_register_out),
 	
 	.output_channel1(systolic3_output[0]),
@@ -694,6 +700,8 @@ module layer4_cnn(
 );
 
 	layer2_systolic array4(
+	.clk(clk),
+	.rst(rst),
 	.input_channel(col_2_1_register_out),
 	
 	.output_channel1(systolic4_output[0]),
@@ -715,6 +723,8 @@ module layer4_cnn(
 	.weight8(weight_register_out4[7])
 );
 	layer2_systolic array5(
+	.clk(clk),
+	.rst(rst),
 	.input_channel(col_2_2_register_out),
 	
 	.output_channel1(systolic5_output[0]),
@@ -736,6 +746,8 @@ module layer4_cnn(
 	.weight8(weight_register_out5[7])
 );
 	layer2_systolic array6(
+	.clk(clk),
+	.rst(rst),
 	.input_channel(col_2_3_register_out),
 	
 	.output_channel1(systolic6_output[0]),
@@ -757,6 +769,8 @@ module layer4_cnn(
 	.weight8(weight_register_out6[7])
 );
 	layer2_systolic array7(
+	.clk(clk),
+	.rst(rst),
 	.input_channel(col_3_1_register_out),
 	
 	.output_channel1(systolic7_output[0]),
@@ -778,6 +792,8 @@ module layer4_cnn(
 	.weight8(weight_register_out7[7])
 );
 	layer2_systolic array8(
+	.clk(clk),
+	.rst(rst),
 	.input_channel(col_3_2_register_out),
 	
 	.output_channel1(systolic8_output[0]),
@@ -799,6 +815,8 @@ module layer4_cnn(
 	.weight8(weight_register_out8[7])
 );
 	layer2_systolic array9(
+	.clk(clk),
+	.rst(rst),
 	.input_channel(col_3_3_register_out),
 	
 	.output_channel1(systolic9_output[0]),
