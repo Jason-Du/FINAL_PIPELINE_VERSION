@@ -194,7 +194,7 @@ module layer2_systolic(
 	logic               [127:0] channel7_reg_out;
 	logic               [127:0] channel8_reg_out;
 	
-	always_ff@(posedge clk or posedge rst)
+	always_ff@(posedge clk or rst)
 	begin
 		if(rst)
 		begin

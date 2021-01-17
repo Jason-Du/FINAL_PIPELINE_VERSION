@@ -9,8 +9,8 @@ config_rtlds -rule  -disable -tag { IDN_NR_SVKY ARY_MS_DRNG IDN_NR_AMKY IDN_NR_C
 config_rtlds -rule  -disable -tag { REG_NR_RWRC }
 # vsd2018_constrain //
 
-analyze -sv +incdir+../SRAMcompiler+../LocalBuffer+../include+../src  ../src/layer1_systolic_rtl.sv
-elaborate -bbox true -top layer1_systolic
+analyze -sv +incdir+../SRAMcompiler+../LocalBuffer+../include+../src  ../src/layer7_systolic_rtl.sv
+elaborate -bbox true -top layer7_systolic
 
 # Setup clock and reset
 clock clk

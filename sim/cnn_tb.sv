@@ -74,8 +74,8 @@
 
 `define		RESULT_FILE		    "RESULT.csv"
 `define MAX 1000000000
-`define CYCLE 2.0
-localparam PIC_NUM=1000;
+`define CYCLE 12.0
+localparam PIC_NUM=100;
 
 localparam TOTAL_WEIGHT_NUM=(`PICTURE_CHANNEL*`LAYER1_OUTPUT_CHANNEL_NUM+
 							`LAYER1_OUTPUT_CHANNEL_NUM*`LAYER2_OUTPUT_CHANNEL_NUM+
@@ -245,7 +245,7 @@ initial
 begin
 
 `ifdef RTL
-	$fsdbDumpfile("top.fsdb");
+	$fsdbDumpfile("top2.fsdb");
 	$fsdbDumpvars("+struct", "+mda",TOP);
 `endif
 

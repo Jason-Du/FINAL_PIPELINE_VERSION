@@ -149,7 +149,6 @@ module layer7_fc(
 		SAVE_SETTING:
 		begin
 			layer7_calculation_done_register_in=1'b0;
-			
 			systolic_adder_control=1'b0;
 			read_pixel_signal=1'b1;
 			read_pixel_clear=1'b0;
@@ -174,7 +173,8 @@ module layer7_fc(
 				read_pixel_clear=1'b0;
 				read_pixel_row_keep=1'b1;
 			end
-			if(read_pixel_row_count==`LAYER7_READ_PIXEL_COUNT_COL_END&&read_pixel_count==`LAYER7_READ_PIXEL_COUNT_COL_END)
+			//if(read_pixel_row_count==`LAYER7_READ_PIXEL_COUNT_COL_END&&read_pixel_count==`LAYER7_READ_PIXEL_COUNT_COL_END)
+			if(read_pixel_row_count==16'd5)
 			begin
 				save_ns=SAVE_IDLE;
 				layer7_calculation_done_register_in=1'b1;
